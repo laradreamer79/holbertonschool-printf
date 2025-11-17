@@ -14,15 +14,13 @@ int _putchar(char c)
 
 int print_string(char *str)
 {
-	int i = 0;
+    int i = 0;
 
-	if (str == NULL)
-		str = "(null)";
-	while (str)
-	{
-	i += _putchar(*str++);
-	return (i);
-	}
+    if (str == NULL)
+        str = "(null)";
+    while (*str)
+        i += _putchar(*str++);
+    return (i);
 }
 
 int print_number(int n)
