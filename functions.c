@@ -12,7 +12,7 @@ int _putchar(char c)
 }
 
 
-int print_sting(char *str)
+int print_string(char *str)
 {
 	int i = 0;
 

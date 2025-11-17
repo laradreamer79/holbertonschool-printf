@@ -16,7 +16,7 @@ format++;
 if(*format =='c')
 i += _putchar(va_arg(args,int));
 else if (*format == 's')
-i += print_sring(va_arg(args,char *));
+i += print_string(va_arg(args,char *));
 else if (*format == '%')
 i += _putchar('%');
 else if (*format == 'd' || *format == 'i')
