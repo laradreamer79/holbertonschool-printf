@@ -12,7 +12,12 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-
+/**
+ * print_s - prints a string
+ * @str: pointer to string
+ *
+ * Return: number of characters printed
+ */
 int print_s(char *str)
 {
 	int i = 0;
@@ -25,10 +30,16 @@ int print_s(char *str)
 	return (i);
 	}
 }
-
+/**
+ * print_num - prints an integer
+ * @n: integer to print
+ *
+ * Return: number of characters printed
+ */
 int print_num(int n)
 {
 	int i = 0;
+
 	if (n < 0)
 	{
 		i += _putchar('-');
