@@ -34,7 +34,7 @@ int print_number(int n)
 		n = -n;
 	}
 	if (n / 10)
-		i += print_num(n / 10);
+		i += print_number(n / 10);
 	i += _putchar((n % 10) + '0');
 	return (i);
 }
