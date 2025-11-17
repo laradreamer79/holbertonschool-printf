@@ -36,13 +36,14 @@ return (i);
 int print_number(int n)
 {
 int i = 0;
-if (n < 0)
+long num = n;
+if (num < 0)
 {
 i += _putchar('-');
-n = -n;
+num = -num;
 }
-if (n / 10)
-i += print_number(n / 10);
-i += _putchar((n % 10) + '0');
-return (i);
+if (num / 10)
+i += print_number(num / 10);
+i += _putchar((num % 10) + '0');
+return i;
 }
