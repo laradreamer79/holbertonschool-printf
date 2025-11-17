@@ -7,8 +7,8 @@
 /* Function prototypes */
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_string(char *str);
-int print_number(int n);
+int print_s(char *str);
+int print_num(int n);
 int _putchar(char c);
 #endif /* MAIN_H */
 

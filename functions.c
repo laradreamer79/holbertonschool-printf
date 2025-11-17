@@ -11,3 +11,31 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+
+int print_s(char *str)
+{
+	int i = 0;
+
+	if (str == NULL)
+		str = "(null)";
+	while (str)
+	{
+	i += _putchar(*str++);
+	return (i);
+	}
+}
+
+int print_num(int n)
+{
+	int i = 0;
+	if (n < 0)
+	{
+		i += _putchar('-');
+		n = -n;
+	}
+	if (n / 10)
+		i += print_num(n / 10);
+	i += _putchar((n % 10) + '0');
+	return (i);
+}
