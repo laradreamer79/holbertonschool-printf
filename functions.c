@@ -36,7 +36,7 @@ return (i);
 int print_number(int n)
 {
 int i = 0;
-long num = n;
+unsigned int num = n;
 if (num < 0)
 {
 i += _putchar('-');
