@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "main.h"
 /**
  * _putchar - writes the character c to stdout
@@ -13,7 +12,7 @@ int _putchar(char c)
 }
 
 
-int print_s(char *str)
+int print_sting(char *str)
 {
 	int i = 0;
 
@@ -26,7 +25,7 @@ int print_s(char *str)
 	}
 }
 
-int print_num(int n)
+int print_number(int n)
 {
 	int i = 0;
 	if (n < 0)

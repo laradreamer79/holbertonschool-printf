@@ -14,12 +14,23 @@ if(*format == '%')
 {
 format++;
 if(*format =='c')
-i += _putchar(va_args(args,int));
+i += _putchar(va_arg(args,int));
 else if (*format == 's')
-i += print_s(va_args(args,char *));
+i += print_sring(va_arg(args,char *));
 else if (*format == '%')
+i += _putchar('%');
+else if (*format == 'd' || *format == 'i')
+i += print_number(va_arg(args,int));
+else
+{
+i += _putchar('%');
+i += _putchar(*format); 
 }
 }
-
-
+else
+i += _putchar(*format);
+format++;
+}
+va_end(args);
+return (i);
 }
