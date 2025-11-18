@@ -1,4 +1,4 @@
-# Custom C - printf
+# Custom _printf in C
 
 ## Overview
 This project implements a custom version of the C `printf` function called `_printf`.  
