@@ -36,7 +36,7 @@ return (i);
 int print_number(int n)
 {
 int i = 0;
-unsigned int num = n;
+long num = n;
 if (num < 0)
 {
 i += _putchar('-');
@@ -45,5 +45,5 @@ num = -num;
 if (num / 10)
 i += print_number(num / 10);
 i += _putchar((num % 10) + '0');
-return i;
+return (i);
 }
