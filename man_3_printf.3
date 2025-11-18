@@ -1,0 +1,45 @@
+NAME
+     _printf
+
+LIBRARY
+     Custom printf function
+
+SYNOPSIS
+#include <stdio.h>
+
+
+int
+     _printf(const char * restrict format, ...);
+
+DESCRIPTION
+The _printf() family of functions produces output according to a format as described below.The _printf() function write the output under the control of a format string that specifies how subsequent arguments are converted for output.
+
+The format string is composed of zero or more directives: ordinary characters (not %), which
+     are copied unchanged to the output stream; and conversion specifications, each of which
+     results in fetching zero or more subsequent arguments.  Each conversion specification is
+     introduced by the % character.  The arguments must correspond properly with the conversion specifier
+
+
+SUPPORTED CONVERSION SPECIFIERS
+The conversion specifiers and their meanings are:
+
+A character that specifies the type of conversion to be applied.
+
+C	The int argument is converted to an unsigned char, and the resulting character is
+written.
+S	The char * argument is expected to be a pointer to an array of character type
+(pointer to a string).  Characters from the array are written up to (but not
+including) a terminating NUL character
+
+%	A ‘%’ is written.  No argument is converted.  The complete conversion
+specification is ‘%%’.
+%d, %i		The int argument is converted to signed decimal notation.
+
+RETURN VALUES
+These functions return the number of characters printed (not including the trailing ‘\0’ used
+     to end output to strings).
+These functions return a negative value if an error occurs.
+
+EXAMPLES
+
+
