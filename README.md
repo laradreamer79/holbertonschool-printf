@@ -1,4 +1,4 @@
-# Custom C - printf
+# Custom printf in C
 
 ## Overview
 This project implements a custom version of the C `printf` function called `_printf`.  
@@ -7,7 +7,7 @@ It can print characters, strings, numbers, and the percent sign.
 Supported format specifiers:
 
 - `%c` → character  
-- `%s` → string  
+- `%s` → string
 - `%d` / `%i` → signed integer  
 - `%%` → percent sign
 
