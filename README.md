@@ -45,7 +45,7 @@ Supported format specifiers:
 
 ## Example Usage
 - Here is a simple program you can use to test the function:
-
+```c
 #include "main.h"
 
 int main(void)
@@ -57,7 +57,7 @@ int main(void)
 
     return 0;
 }
-
+```
 - You can name the file {main.c} for example
 
 ## How to Compile
