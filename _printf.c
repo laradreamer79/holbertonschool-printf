@@ -1,3 +1,4 @@
+
 #include "main.h"
 /**
  * _printf - Produces output according to a format.
@@ -26,6 +27,8 @@ else if (*format == '%')
 i += _putchar('%');
 else if (*format == 'd' || *format == 'i')
 i += print_number(va_arg(args, int));
+else if (*format == 'b')
+i += print_binary(va_arg(args, unsigned int));
 else
 {
 i += _putchar('%');
