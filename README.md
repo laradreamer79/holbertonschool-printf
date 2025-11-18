@@ -20,8 +20,6 @@ Supported format specifiers:
 | `_printf.c`     | Contains the main `_printf` function that handles format strings. |
 | `functions.c`   | Contains helper functions: `_putchar`, `print_string`, `print_number`. |
 | `main.h`        | Header file with function prototypes and necessary includes. |
-| `test1.c`       | Example file with a `main()` function to test `_printf`. |
-
 ---
 
 ## Functions
@@ -45,9 +43,28 @@ Supported format specifiers:
 
 ---
 
+## Example Usage
+- Here is a simple program you can use to test the function:
+
+#include "main.h"
+
+int main(void)
+{
+    _printf("Character: %c\n", 'A');
+    _printf("String: %s\n", "Hello!");
+    _printf("Number: %d\n", 42);
+    _printf("Percent: %%\n");
+
+    return 0;
+}
+
+- You can name the file {main.c} for example
+
 ## How to Compile
 
 Make sure you include all C files when compiling:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _printf.c functions.c test1.c -o printf_executable
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _printf.c functions.c main.c -o my_printf
+
+then run ./my_printf
