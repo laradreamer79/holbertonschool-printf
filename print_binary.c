@@ -1,39 +1,34 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: unsigned int
+ * print_binary_rec - recursive helper to print binary number
+ * @n: number to print
  *
  * Return: number of characters printed
  */
-int print_binary(unsigned int n)
+int print_binary_rec(unsigned int n)
 {
-    int count = 0;
-    unsigned int mask = 1 << 31; /* For 32-bit integer */
-    int started = 0;
+	int count = 0;
 
-    if (n == 0)
-    {
-        _putchar('0');
-        return (1);
-    }
+	if (n / 2)
+		count += print_binary_rec(n / 2);
 
-    while (mask > 0)
-    {
-        if (n & mask)
-        {
-            _putchar('1');
-            count++;
-            started = 1;
-        }
-        else if (started)
-        {
-            _putchar('0');
-            count++;
-        }
-        mask >>= 1;
-    }
-
-    return (count);
+	count += _putchar((n % 2) + '0');
+	return (count);
 }
 
+/**
+ * print_binary - prints an unsigned int in binary format
+ * @args: argument list
+ *
+ * Return: number of characters printed
+ */
+int print_binary(va_list args)
+{
+	unsigned int n = va_arg(args, unsigned int);
+
+	if (n == 0)
+		return (_putchar('0'));
+
+	return (print_binary_rec(n));
+}

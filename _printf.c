@@ -29,6 +29,14 @@ else if (*format == 'd' || *format == 'i')
 i += print_number(va_arg(args, int));
 else if (*format == 'b')
 i += print_binary(va_arg(args, unsigned int));
+else if (*format == 'u')
+i += print_unsigned(args);
+else if (*format == 'o')
+i += print_octal(args);
+else if (*format == 'x')
+i += print_hex_lower(args);
+else if (*format == 'X')
+i += print_hex_upper(args);
 else
 {
 i += _putchar('%');
