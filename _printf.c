@@ -49,5 +49,6 @@ i += _putchar(*format);
 format++;
 }
 va_end(args);
+_putchar(-1); /* flush buffer */
 return (i);
 }

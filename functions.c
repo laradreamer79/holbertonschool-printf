@@ -8,9 +8,27 @@
  */
 int _putchar(char c)
 {
-return (write(1, &c, 1));
-}
+	static char buffer[1024];
+	static int index;
+	int written = 1;
 
+	if (c == -1 || index == 1024)
+	{
+		if (index > 0)
+		{
+			write(1, buffer, index);
+			index = 0;
+		}
+	}
+
+	if (c != -1)
+	{
+		buffer[index] = c;
+		index++;
+	}
+
+	return (written);
+}
 /**
  * print_string - prints a string to stdout
  * @str: The string to print
