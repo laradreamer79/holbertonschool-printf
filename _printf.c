@@ -37,6 +37,8 @@ else if (*format == 'x')
     i += print_hex_lower(args);
 else if (*format == 'X')
     i += print_hex_upper(args);
+else if (*format == 'S')
+	i += print_S(va_arg(args, char *));
 else
 {
     i += _putchar('%');
