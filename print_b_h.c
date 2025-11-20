@@ -17,6 +17,7 @@ int print_binary_rec(unsigned int n)
 	return (count);
 }
 
+
 /**
  * print_binary - prints an unsigned int in binary format
  * @args: argument list
@@ -32,6 +33,7 @@ int print_binary(va_list args)
 
 	return (print_binary_rec(n));
 }
+
 
 /**
  * print_hex_rec - recursive helper to print hex number

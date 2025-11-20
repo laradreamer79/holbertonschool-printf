@@ -29,4 +29,5 @@ int print_pointer(va_list args)
         i += _putchar(hex[len]);
 
     return (i);
+    
 }

@@ -12,7 +12,7 @@ int x = 10;
 
 	_printf("Testing characters: %c\n", 'A');
 	_printf("Testing strings: %s\n", "Hello, world!");
-	_printf("Testing integers: %d\n", 12345);
+	_printf("Testing integers: %d\n", 123456);
 	_printf("Testing negative integers: %i\n", -9879891);
 	_printf("Testing percent sign: %%\n");
 _printf("\n");
@@ -33,4 +33,5 @@ _printf("%r", "Hello");
 _printf("\n");
 
 	return (0);
+	
 }

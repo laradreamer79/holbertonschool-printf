@@ -29,6 +29,7 @@ int _putchar(char c)
 
 	return (written);
 }
+
 /**
  * print_string - prints a string to stdout
  * @str: The string to print

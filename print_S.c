@@ -41,4 +41,5 @@ int print_S(char *s)
 	}
 
 	return (count);
+	
 }
