@@ -8,7 +8,7 @@
  */
 int print_pointer(va_list args)
 {
-    unsigned long long ptr = (unsigned long long)va_arg(args, void *);
+    unsigned long ptr = (unsigned long)va_arg(args, void *);
     char hex[20];
     char *symbols = "0123456789abcdef";
     int i = 0, len = 0;
@@ -29,5 +29,5 @@ int print_pointer(va_list args)
         i += _putchar(hex[len]);
 
     return (i);
-    
+
 }
