@@ -22,6 +22,7 @@ Supported format specifiers:
 | `main.h`       | Header file with function prototypes and necessary includes. |
 ---
 
+
 ## Functions
 
 ### `_printf(const char *format, ...)`
