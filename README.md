@@ -10,7 +10,14 @@ Supported format specifiers:
 - `%s` → string
 - `%d` / `%i` → signed integer  
 - `%%` → percent sign
-
+- `%b` → unsigned int printed in binary
+- `%u` → unsigned integer
+- `%o` → unsigned octal
+- `%x` → unsigned hexadecimal (lowercase)
+- `%X` → unsigned hexadecimal (uppercase)
+- `%S` → string with non-printable chars shown as `\xHH`
+- `%r` → reversed string
+- `%p` → pointer address
 ---
 
 ## Files
