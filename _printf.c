@@ -43,6 +43,8 @@ else if (*format == 'p')
     i += print_pointer(args);
 else if (*format == 'r')
     i += print_reverse(va_arg(args, char *));
+else if (*format == 'R')
+    i += print_rot13(args);
 else
 {
     i += _putchar('%');

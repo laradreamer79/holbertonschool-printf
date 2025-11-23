@@ -1,18 +1,26 @@
 #include "main.h"
 
-int print_reverse(char *str)
+int print_rot13(va_list args)
 {
-    int len = 0, i;
+    char *str = va_arg(args, char *);
+    int count = 0;
+    char c;
 
     if (str == NULL)
-        return print_string("(null)");
+        str = "(null)";
 
-    while (str[len] != '\0')
-        len++;
+    while (*str)
+    {
+        c = *str;
 
-    for (i = len - 1; i >= 0; i--)
-        _putchar(str[i]);
+        if ((c >= 'A' && c <= 'Z'))
+            c = ((c - 'A' + 13) % 26) + 'A';
+        else if ((c >= 'a' && c <= 'z'))
+            c = ((c - 'a' + 13) % 26) + 'a';
 
-    return len;
-    
+        count += _putchar(c);
+        str++;
+    }
+
+    return (count);
 }
