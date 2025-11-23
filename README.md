@@ -42,20 +42,23 @@ Supported format specifiers:
 ## Project Architecture
 
 _printf()
- ├── scans the format string
- ├── sends each specifier to the correct handler:
- │     ├── print_char      → %c
- │     ├── print_string    → %s
- │     ├── print_number    → %d / %i
- │     ├── print_binary    → %b
- │     ├── print_unsigned  → %u
- │     ├── print_octal     → %o
- │     ├── print_hex       → %x / %X
- │     ├── print_S         → %S
- │     ├── print_r         → %r
- │     ├── print_R         → %R
- │     └── print_p         → %p
- └── prints output through buffered _putchar
+   │
+   ├── scans the format string
+   │
+   ├── sends each specifier to the correct handler:
+   │      ├── print_char      → %c
+   │      ├── print_string    → %s
+   │      ├── print_number    → %d / %i
+   │      ├── print_binary    → %b
+   │      ├── print_unsigned  → %u
+   │      ├── print_octal     → %o
+   │      ├── print_hex       → %x / %X
+   │      ├── print_S         → %S
+   │      ├── print_r         → %r
+   │      ├── print_R         → %R
+   │      └── print_p         → %p
+   │
+   └── prints all output through buffered _putchar (1024-byte buffer)
 
 ## Functions
 
