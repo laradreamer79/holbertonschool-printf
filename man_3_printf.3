@@ -30,6 +30,39 @@ Prints the % character itself.
 .B d, i
 Prints an int as a signed decimal number.
 
+.TP
+.B b
+Prints an unsigned int in binary.
+
+.TP
+.B u
+Prints an unsigned int in decimal (unsigned format).
+
+.TP
+.B o
+Prints an unsigned int in octal.
+
+.TP
+.B x
+Prints an unsigned int in hexadecimal (lowercase).
+
+.TP
+.B X
+Prints an unsigned int in hexadecimal (uppercase).
+
+.TP
+.B S
+Prints a string, replacing non-printable characters
+(ASCII < 32 or >= 127) with \x followed by two uppercase hex digits.
+
+.TP
+.B r
+Prints the reversed version of a string.
+
+.TP
+.B p
+Prints a pointer address in hexadecimal.
+
 .SH RETURN VALUES
 The function returns the number of characters printed.  
 A negative value is returned if an error happens.
@@ -55,8 +88,53 @@ Output: Integer (i): -42
 _printf("Percent sign: %%\n");
 Output: %
 
-.SH AUTHORS
-Written by Lara Alzannan and Haitham Alshehri.
+.TP
+_printf("Binary: %b\n", 98);
+Output: Binary: 1100010
+
+.TP
+_printf("Unsigned: %u\n", 300);
+Output: Unsigned: 300
+
+.TP
+_printf("Octal: %o\n", 98);
+Output: Octal: 142
+
+.TP
+_printf("Hex lowercase: %x\n", 255);
+Output: Hex lowercase: ff
+
+.TP
+_printf("Hex uppercase: %X\n", 255);
+Output: Hex uppercase: FF
+
+.TP
+_printf("Reversed: %r\n", "Hello");
+Output: olleH
+
+.TP
+_printf("Special S: %S\n", "Best\nSchool");
+Output: Best\x0ASchool
+
+.TP
+_printf("Pointer: %p\n", (void *)0x1234);
+Output: 0x1234
+
+.TP
+_printf("%q\n");
+Output: (returns -1 due to unsupported conversion specifier)
+
+.SH LIMITATIONS
+This custom _printf does not handle flag characters, field width, precision,
+length modifiers, or floating-point specifiers. Only the supported conversion
+specifiers listed above are implemented.
 
 .SH ERRORS
 A negative value is returned if an error occurs.
+
+.SH BUGS
+There are no known major bugs at this time. Report issues if unexpected
+behavior occurs with any supported specifier.
+
+.SH AUTHORS
+Written by Lara Alzannan and Haitham Alshehri.
