@@ -112,6 +112,16 @@ Then run the program with:
 
 ./my_printf
 
+## How It Works
+
+1. `_printf` scans the format string.
+2. Normal characters are printed immediately.
+3. When `%` is found:
+   - The next character determines the specifier.
+   - The appropriate handler function is called.
+4. Each handler writes output using `_putchar`.
+5. The function returns the total number of printed characters.
+
 ## Manual Page
 This project includes a custom man page named `man_3_printf.3`
 that documents the behavior, usage, and supported specifiers
