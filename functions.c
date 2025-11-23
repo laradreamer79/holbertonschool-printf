@@ -8,7 +8,26 @@
  */
 int _putchar(char c)
 {
-return (write(1, &c, 1));
+	static char buffer[1024];
+	static int index;
+	int written = 1;
+
+	if (c == -1 || index == 1024)
+	{
+		if (index > 0)
+		{
+			write(1, buffer, index);
+			index = 0;
+		}
+	}
+
+	if (c != -1)
+	{
+		buffer[index] = c;
+		index++;
+	}
+
+	return (written);
 }
 
 /**
@@ -37,7 +56,7 @@ int print_number(int n)
 {
 long num = n;
 int i = 0;
-
+long num = n;
 if (num < 0)
 {
 i += _putchar('-');
@@ -48,6 +67,5 @@ if (num / 10)
 i += print_number(num / 10);
 
 i += _putchar((num % 10) + '0');
-
 return (i);
 }

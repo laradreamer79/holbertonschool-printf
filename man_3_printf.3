@@ -1,0 +1,62 @@
+.TH _PRINTF 3 "18 Nov 2025" "Custom C Library" "Holberton School"
+.SH NAME
+_printf \- a custom printf function in C.
+.SH SYNOPSIS
+.B #include "main.h"
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The
+.B _printf()
+function prints text based on a format string.  
+The format string can contain normal characters, which are printed as they are, and
+format specifiers, which are replaced by values passed to the function.
+
+.SH SUPPORTED CONVERSION SPECIFIERS
+.TP
+.B c
+Prints a character from an int value.
+
+.TP
+.B s
+Prints a null-terminated string.
+
+.TP
+.B %
+Prints the % character itself.
+
+.TP
+.B d, i
+Prints an int as a signed decimal number.
+
+.SH RETURN VALUES
+The function returns the number of characters printed.  
+A negative value is returned if an error happens.
+
+.SH EXAMPLES
+.TP
+_printf("Character: %c\n", 'A');
+Output: Character: A
+
+.TP
+_printf("String: %s\n", "Hello");
+Output: String: Hello
+
+.TP
+_printf("Integer (d): %d\n", 98);
+Output: Integer (d): 98
+
+.TP
+_printf("Integer (i): %i\n", -42);
+Output: Integer (i): -42
+
+.TP
+_printf("Percent sign: %%\n");
+Output: %
+
+.SH AUTHORS
+Written by Lara Alzannan and Haitham Alshehri.
+
+.SH ERRORS
+A negative value is returned if an error occurs.
