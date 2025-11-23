@@ -126,6 +126,9 @@ This project includes a custom man page named `man_3_printf.3`
 that documents the behavior, usage, and supported specifiers
 of the `_printf` function.
 
+You can view it here:  
+[man_3_printf.3](https://github.com/laradreamer79/holbertonschool-printf/blob/main/man_3_printf.3) 
+
 ## Glossary
 
 **Specifier**  
