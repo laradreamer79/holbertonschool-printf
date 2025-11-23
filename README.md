@@ -22,40 +22,6 @@ Supported format specifiers:
 | `main.h`       | Header file with function prototypes and necessary includes. |
 ---
 
-##  Advanced Specifiers Implemented
-
-### **Task 3 — `%b`**
-Prints an unsigned integer in binary.
-
----
-
-### **Task 4 — `%S`**
-- Prints a string  
-- Non-printable characters (ASCII < 32 or ≥ 127) are printed as:  
-  `\xHH` (uppercase hexadecimal)
-
----
-
-### **Task 5 — `%r`**
-Prints a string in reverse.
-
----
-
-### **Task 6 — `%R`**
-Applies ROT13 encryption to a string and prints it.
-
----
-
-### **Task 7 — Manual Page**
-A full `man_3_printf` manual page is included in the repository.
-
----
-
-### **Task 14 — Advanced requirement**
-*(Describe exactly what Task 14 in your cohort is — usually buffer handling or printing address. If you want, I’ll fill it in.)*
-
----
-
 
 ## Functions
 
