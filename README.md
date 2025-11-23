@@ -117,6 +117,16 @@ int main(void)
     _printf("Number: %d\n", 42);
     _printf("Percent: %%\n");
 
+/* Advanced examples */
+    _printf("Binary: %b\n", 98);
+    _printf("Unsigned: %u\n", 150);
+    _printf("Octal: %o\n", 150);
+    _printf("Hex (lower): %x\n", 255);
+    _printf("Hex (upper): %X\n", 255);
+    _printf("Reversed: %r\n", "Hello");
+    _printf("Special S: %S\n", "Best\nSchool");
+    _printf("Pointer: %p\n", (void *)0x1234);
+
     return 0;
 }
 ```
