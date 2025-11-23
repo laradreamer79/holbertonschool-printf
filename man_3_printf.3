@@ -120,6 +120,10 @@ Output: Best\x0ASchool
 _printf("Pointer: %p\n", (void *)0x1234);
 Output: 0x1234
 
+.TP
+_printf("%q\n");
+Output: (returns -1 due to unsupported conversion specifier)
+
 .SH LIMITATIONS
 This custom _printf does not handle flag characters, field width, precision,
 length modifiers, or floating-point specifiers. Only the supported conversion
