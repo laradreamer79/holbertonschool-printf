@@ -27,6 +27,14 @@ Supported format specifiers:
 | `_printf.c`    | Contains the main `_printf` function that handles format strings. |
 | `functions.c`  | Contains helper functions: `_putchar`, `print_string`, `print_number`. |
 | `main.h`       | Header file with function prototypes and necessary includes. |
+| `print_binary.c` | Handles `%b` conversion (binary). |
+| `print_unsigned.c` | Handles `%u` conversion. |
+| `print_octal.c` | Handles `%o` conversion. |
+| `print_hex.c` | Handles `%x` and `%X` conversions. |
+| `print_S.c` | Handles `%S` conversion (non-printable characters). |
+| `print_r.c` | Handles `%r` reversed string conversion. |
+| `print_p.c` | Handles `%p` pointer conversion. |
+| `buffered_putchar` (inside `functions.c`) | Implements 1024-byte buffer for minimal write() calls. |
 ---
 
 ##  Advanced Specifiers Implemented
