@@ -134,9 +134,10 @@ int main(void)
 
 ## How to Compile
 
-Make sure you include all C files when compiling:
+Use this command to compile all source files:
 
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _printf.c functions.c main.c -o my_printf
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o my_printf
 
-then run ./my_printf
+Then run the program with:
+
+./my_printf
