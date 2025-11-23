@@ -126,6 +126,46 @@ This project includes a custom man page named `man_3_printf.3`
 that documents the behavior, usage, and supported specifiers
 of the `_printf` function.
 
+## Glossary
+
+**Specifier**  
+A character that comes after `%` in a format string (ex: `%d`, `%s`, `%b`).  
+It tells `_printf` how to interpret and print the next argument.
+
+**Format String**  
+The string passed to `_printf` that contains normal text and specifiers.  
+Example: `"Number: %d\n"`
+
+**Handler Function**  
+A function that processes a specific conversion specifier.  
+For example:  
+- `print_number()` handles `%d` / `%i`  
+- `print_binary()` handles `%b`  
+- `print_hex()` handles `%x` / `%X`
+
+**Buffer**  
+A temporary storage area used to collect characters before writing them to stdout.  
+This project uses a **1024-byte buffer** inside `functions.c` to reduce the number of `write()` calls.
+
+**Non-Printable Character**  
+A character that cannot be displayed normally (ASCII < 32 or >= 127).  
+In the `%S` specifier, these characters are printed as `\xHH`.
+
+**Variadic Function**  
+A function that accepts a variable number of arguments.  
+`_printf` uses `va_list`, `va_start`, `va_arg`, and `va_end` to handle these.
+
+**ROT13**  
+A simple letter substitution cipher used by the `%R` specifier.  
+Each letter is rotated 13 positions in the alphabet.
+
+**Pointer Address**  
+A memory address printed using `%p` as a hexadecimal value.
+
+**Unsupported Specifier**  
+A format specifier that `_printf` does not implement (ex: `%f`).  
+Using unsupported specifiers returns `-1`.
+
 ## Authors
 - Lara Alzannan
 - Haitham Alshehri
