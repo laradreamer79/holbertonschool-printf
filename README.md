@@ -111,3 +111,9 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o my_printf
 Then run the program with:
 
 ./my_printf
+
+## Manual Page
+This project includes a custom man page named `man_3_printf.3`
+that documents the behavior, usage, and supported specifiers
+of the `_printf` function.
+
