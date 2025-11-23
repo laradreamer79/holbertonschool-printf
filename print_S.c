@@ -6,6 +6,7 @@
  *
  * Return: number of characters printed
  */
+
 int print_S(char *s)
 {
 	int i = 0, count = 0;
