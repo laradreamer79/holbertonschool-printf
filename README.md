@@ -127,3 +127,7 @@ This project includes a custom man page named `man_3_printf.3`
 that documents the behavior, usage, and supported specifiers
 of the `_printf` function.
 
+## Authors
+- Lara Alzannan
+- Haitham Alshehri
+
