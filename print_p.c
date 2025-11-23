@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 
 /**
  * print_pointer - prints a pointer address in hexadecimal (0x...)
@@ -8,7 +9,7 @@
  */
 int print_pointer(va_list args)
 {
-    unsigned long ptr = (unsigned long)va_arg(args, void *);
+    uintptr_t ptr = (uintptr_t)va_arg(args, void *);
     char hex[20];
     char *symbols = "0123456789abcdef";
     int i = 0, len = 0;
