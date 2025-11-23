@@ -91,6 +91,18 @@ A full `man_3_printf` manual page is included in the repository.
 - Prints an integer, handles negative numbers correctly.  
 - Works with `INT_MIN` without errors.
 
+### `print_S(char *str)`
+- Prints a string.
+- Non-printable characters are replaced with `\xHH` (uppercase hex, 2 digits).
+
+### `print_binary(unsigned int n)`
+- Prints the binary representation of an unsigned int.
+
+### `print_r(char *str)`
+- Prints the reversed version of a string.
+
+### `print_p(void *ptr)`
+- Prints a pointer address in hexadecimal form.
 ---
 
 ## Example Usage
