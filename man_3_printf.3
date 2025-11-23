@@ -88,6 +88,38 @@ Output: Integer (i): -42
 _printf("Percent sign: %%\n");
 Output: %
 
+.TP
+_printf("Binary: %b\n", 98);
+Output: Binary: 1100010
+
+.TP
+_printf("Unsigned: %u\n", 300);
+Output: Unsigned: 300
+
+.TP
+_printf("Octal: %o\n", 98);
+Output: Octal: 142
+
+.TP
+_printf("Hex lowercase: %x\n", 255);
+Output: Hex lowercase: ff
+
+.TP
+_printf("Hex uppercase: %X\n", 255);
+Output: Hex uppercase: FF
+
+.TP
+_printf("Reversed: %r\n", "Hello");
+Output: olleH
+
+.TP
+_printf("Special S: %S\n", "Best\nSchool");
+Output: Best\x0ASchool
+
+.TP
+_printf("Pointer: %p\n", (void *)0x1234);
+Output: 0x1234
+
 .SH AUTHORS
 Written by Lara Alzannan and Haitham Alshehri.
 
