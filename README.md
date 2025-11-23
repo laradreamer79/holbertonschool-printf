@@ -17,6 +17,7 @@ Supported format specifiers:
 - `%X` → unsigned hexadecimal (uppercase)
 - `%S` → string with non-printable chars shown as `\xHH`
 - `%r` → reversed string
+- `%R` → ROT13-encoded string
 - `%p` → pointer address
 ---
 
@@ -33,6 +34,7 @@ Supported format specifiers:
 | `print_hex.c` | Handles `%x` and `%X` conversions. |
 | `print_S.c` | Handles `%S` conversion (non-printable characters). |
 | `print_r.c` | Handles `%r` reversed string conversion. |
+| `print_R.c` | Handles `%R` ROT13 string conversion. |
 | `print_p.c` | Handles `%p` pointer conversion. |
 | `buffered_putchar` (inside `functions.c`) | Implements 1024-byte buffer for minimal write() calls. |
 ---
@@ -67,6 +69,9 @@ Supported format specifiers:
 ### `print_r(char *str)`
 - Prints the reversed version of a string.
 
+### `print_R(char *str)`
+- Prints the ROT13-encoded version of a string.
+
 ### `print_p(void *ptr)`
 - Prints a pointer address in hexadecimal form.
 ---
@@ -83,7 +88,6 @@ int main(void)
     _printf("Number: %d\n", 42);
     _printf("Percent: %%\n");
 
-/* Advanced examples */
     _printf("Binary: %b\n", 98);
     _printf("Unsigned: %u\n", 150);
     _printf("Octal: %o\n", 150);
@@ -92,8 +96,8 @@ int main(void)
     _printf("Reversed: %r\n", "Hello");
     _printf("Special S: %S\n", "Best\nSchool");
     _printf("Pointer: %p\n", (void *)0x1234);
-
-    return 0;
+    _printf("%R\n", "Hello World!");
+ 
 }
 ```
 - You can name the file {main.c} for example

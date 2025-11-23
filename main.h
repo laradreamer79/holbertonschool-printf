@@ -16,5 +16,5 @@ int print_hex_upper(va_list args);
 int print_S(char *s);
 int print_pointer(va_list args);
 int print_reverse(char *str);
-
+int print_rot13(va_list args);
 #endif
